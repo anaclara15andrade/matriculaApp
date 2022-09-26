@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ disciplina.nome }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>
+
+  <div class="disciplina-detail" padding>
+    <h2>{{disciplina.nome}}</h2>
+    <p>{{disciplina.codigo}}</p>
+  </div>
+</ion-content>

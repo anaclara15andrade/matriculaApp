@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'SEARCH_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-searchbar (ionInput)="getDisciplinas($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+  <ion-list>
+    <button ion-item (click)="openDisciplina(disciplina)" *ngFor="let disciplina of currentDisciplinas">
+      <!-- <ion-avatar item-start>
+        <img [src]="item.profilePic" />
+      </ion-avatar> -->
+      <h2>{{disciplina.nome}}</h2>
+      <p>{{disciplina.codigo}}</p>
+      <!-- <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note> -->
+    </button>
+  </ion-list>
+</ion-content>
