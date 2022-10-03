@@ -6,7 +6,7 @@ import { Matricula } from '../../models/matricula';
 
 @Injectable()
 export class MatriculaProvider {
-  // listaMatriculaAluno: MatriculaAluno[] = [];
+  listaMatricula: Matricula[] = [];
   // listaMatriculaHistorico: MatriculaHistorico [] = [];
 
   constructor() {
@@ -325,5 +325,17 @@ export class MatriculaProvider {
 
 //   delete(matriculaAluno: MatriculaAluno) {
 //     this.listaMatriculaAluno.splice(this.listaMatriculaAluno.indexOf(matriculaAluno), 1);
+  }
+  add(matricula: Matricula){
+    this.listaMatricula.push(matricula);
+  }
+  delete(matricula: Matricula){
+    const index = this.listaMatricula.indexOf(matricula);
+    if(index === -1)
+      return;
+    this.listaMatricula.splice(index, 1);
+  }
+  get(){
+    return this.listaMatricula;
   }
 }

@@ -38,7 +38,7 @@ export class TurmaListPage {
     ) {
     this.disciplina = navParams.get('disciplina');
     console.log(this.disciplina);
-    this.currentTurmas = this.turmaProvider.search({
+    this.currentTurmas = this.turmaProvider.pesquisar({
       disciplina: this.disciplina.codigo
     });
     console.log(this.currentTurmas);
@@ -59,7 +59,7 @@ export class TurmaListPage {
         cancelButton: values.CANCEL_BUTTON
       };
     });
-    this.currentMatriculaConfirmada = this.matriculaProvider.getMatriculaConfimada();
+    //this.currentMatriculaConfirmada = this.matriculaProvider.getMatriculaConfimada();
   }
 
   ionViewDidLoad() {
