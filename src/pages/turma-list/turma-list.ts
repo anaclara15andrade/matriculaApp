@@ -39,7 +39,7 @@ export class TurmaListPage {
     this.disciplina = navParams.get('disciplina');
     console.log(this.disciplina);
     this.currentTurmas = this.turmaProvider.pesquisar({
-      disciplina: this.disciplina.codigo
+      disciplina: 108529
     });
     console.log(this.currentTurmas);
 
