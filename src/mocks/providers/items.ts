@@ -8,7 +8,7 @@ export class Items {
 
   defaultItem: any = {
     "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
+    "profilePic": "assets/imgs/fernando-pessoa.jpg",
     "about": "Burt is a Bear.",
   };
 

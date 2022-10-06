@@ -3,7 +3,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
-import { Disciplina } from '../../models/disciplina';
+import { AlunoProvider } from '../../mocks/providers/aluno';
 
 @IonicPage()
 @Component({
@@ -11,10 +11,12 @@ import { Disciplina } from '../../models/disciplina';
   templateUrl: 'perfil.html'
 })
 export class PerfilPage {
+  aluno: any;
   item: Item;
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.item = this.items.defaultItem;
+  constructor(public navCtrl: NavController, public alunos: AlunoProvider, item: Items) {
+    this.aluno = alunos.search()[2];
+    this.item = item.defaultItem;
   }
 
   /**

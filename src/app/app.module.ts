@@ -12,6 +12,7 @@ import { DisciplinaProvider } from '../mocks/providers/disciplina';
 
 import { Items } from '../mocks/providers/items';
 import { TurmaProvider } from '../mocks/providers/turma';
+import { AlunoProvider } from '../mocks/providers/aluno';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 
@@ -60,6 +61,7 @@ export function provideSettings(storage: Storage) {
   providers: [
     DisciplinaProvider,
     TurmaProvider,
+    AlunoProvider,
     Api,
     Items,
     User,
