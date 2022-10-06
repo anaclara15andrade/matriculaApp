@@ -9,7 +9,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { DisciplinaProvider } from '../mocks/providers/disciplina';
-
+import { MatriculaProvider } from '../mocks/providers/matricula';
 import { Items } from '../mocks/providers/items';
 import { TurmaProvider } from '../mocks/providers/turma';
 import { AlunoProvider } from '../mocks/providers/aluno';
@@ -61,6 +61,7 @@ export function provideSettings(storage: Storage) {
   providers: [
     DisciplinaProvider,
     TurmaProvider,
+    MatriculaProvider,
     AlunoProvider,
     Api,
     Items,

@@ -16,7 +16,9 @@ export class SearchPage {
   currentDisciplinas: any = [];
   currentItems: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items, public disciplinas: DisciplinaProvider) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items, public disciplinas: DisciplinaProvider) {
+    this.currentDisciplinas = this.disciplinas.pesquisar();
+  }
 
   /**
    * Perform a service for the proper items.
@@ -24,7 +26,7 @@ export class SearchPage {
   getDisciplinas(ev) {
     let variavel = ev.target.value;
     if (!variavel || !variavel.trim()) {
-      this.currentDisciplinas = [];
+      this.currentDisciplinas = this.disciplinas.pesquisar();
       return;
     }
     this.currentDisciplinas = this.disciplinas.pesquisar({

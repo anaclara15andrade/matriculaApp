@@ -4,6 +4,7 @@ import { IonicPage, ModalController, NavController } from 'ionic-angular';
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
 import { Disciplina } from '../../models/disciplina';
+import { MatriculaProvider } from '../../mocks/providers/matricula';
 
 @IonicPage()
 @Component({
@@ -12,9 +13,11 @@ import { Disciplina } from '../../models/disciplina';
 })
 export class ListMasterPage {
   currentItems: Item[];
+  matriculas: any[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController, public matriculaProvider: MatriculaProvider) {
     this.currentItems = this.items.query();
+    this.matriculas = matriculaProvider.get();
   }
 
   /**
