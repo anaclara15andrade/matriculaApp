@@ -12,5 +12,15 @@
     <p>{{disciplina.codigo}}</p>
     <p>{{disciplina.creditos}} Créditos</p>
     <p>Unidade: {{disciplina.unidadeAcademica}}</p>
+    <ion-list>
+      <button ion-item (click)="openTurma(turma)" *ngFor="let turma of currentTurmas">
+        <!-- <ion-avatar item-start>
+          <img [src]="item.profilePic" />
+        </ion-avatar> -->
+        <h2>{{turma.nome}}</h2>
+        <p>{{turma.codigo}}</p>
+        <!-- <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note> -->
+      </button>
+    </ion-list>
   </div>
 </ion-content>

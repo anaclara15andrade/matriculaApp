@@ -11,6 +11,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { DisciplinaProvider } from '../mocks/providers/disciplina';
 
 import { Items } from '../mocks/providers/items';
+import { TurmaProvider } from '../mocks/providers/turma';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
 
@@ -58,6 +59,7 @@ export function provideSettings(storage: Storage) {
   ],
   providers: [
     DisciplinaProvider,
+    TurmaProvider,
     Api,
     Items,
     User,

@@ -42,7 +42,7 @@ export class DisciplinaProvider {
         "creditos" : 4,
         "unidadeAcademica" : "ENC"
       }, {
-        "codigo" : "MAT0025",
+        "codigo" : 113034,
         "nome" : "CALCULO 1",
         "creditos" : 6,
         "unidadeAcademica" : "MAT"

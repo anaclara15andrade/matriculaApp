@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{turma.disciplina.nome}} - {{turma.codigo}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <div class="turma-detail" padding>
+    <h2>{{turma.disciplina.nome}}</h2>
+    <h2>{{turma.disciplina.codigo}}</h2>
+    <h4>Periodo Letivo: </h4>
+    <p> {{turma.periodoLetivo.ano}}/{{turma.periodoLetivo.numero}}</p>
+    <h4>Número de Vagas: </h4>
+    <p> {{turma.numeroVagas - turma.numeroMatriculas}}</p>
+    <h4>Horários</h4>
+    <ion-list>
+      <div *ngFor="let horario of turma.listaHorarioAula">
+        <p> {{horario.dia}}</p>
+        <p> {{horario.hora}}</p>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
